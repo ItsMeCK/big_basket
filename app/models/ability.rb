@@ -2,14 +2,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-      case user.role
+      case user.try(:role)
         when "Admin"
-            can [:read, :create, :update, :destroy], Item
-        end
+          can [:read, :create, :update, :destroy], Item
         when "Customer"
-            can [:read], Item
-        end
-      end      
+          can [:read], Item
+      end
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

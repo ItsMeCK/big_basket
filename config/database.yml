@@ -3,6 +3,6 @@ development:
   encoding: unicode
   database: big_basket
   pool: 5
-  username: user
-  password: user1234
+  username: postgres
+  password: root
   host: localhost

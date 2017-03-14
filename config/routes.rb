@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   	root :to => 'items#index'
   end
   devise_scope :user do
-  	get '/', to: 'devise/sessions#new'
+  	get '/', to: 'users/sessions#new'
   end
   
   root  "users/sessions#new"  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

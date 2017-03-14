@@ -80,3 +80,38 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+
+.productbox {
+    background-color:#ffffff;
+  padding:10px;
+  margin-bottom:10px;
+  -webkit-box-shadow: 0 8px 6px -6px  #999;
+     -moz-box-shadow: 0 8px 6px -6px  #999;
+          box-shadow: 0 8px 6px -6px #999;
+}
+
+.producttitle {
+    font-weight:bold;
+  padding:5px 0 5px 0;
+}
+
+.productprice {
+  border-top:1px solid #dadada;
+  padding-top:5px;
+}
+
+.pricetext {
+  font-weight:bold;
+  font-size:1.4em;
+}

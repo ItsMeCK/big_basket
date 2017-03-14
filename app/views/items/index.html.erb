@@ -1,3 +1,4 @@
+<% if current_user.try(:role) == "Admin"%>
 <p id="notice"><%#= notice %></p>
 
 <h1>Items</h1>
@@ -33,7 +34,21 @@
   </tbody>
 </table>
 
+
 <br>
 <% if can? :update, @article %>
 <%= link_to 'New Item', new_item_path %>
 <% end %>
+
+<%  else %>
+<% @items.each do |item| %>
+<div class="col-md-2 column productbox">
+    <%= image_tag("#{item.image}", size: "160x100", alt: "Edit Entry") %>
+    
+    <div class="producttitle"> <%= item.name%></div>
+    <div class="productprice"><div class="pull-right"><%= link_to "Show", item %></div><div class="pricetext"><% item.price%></div>
+    </div>
+</div>
+  <% end %>
+<% end%>  
+

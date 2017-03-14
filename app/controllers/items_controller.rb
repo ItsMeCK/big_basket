@@ -5,8 +5,7 @@ load_and_authorize_resource :except => :create
   # GET /items
   # GET /items.json
   def index
-    puts current_user.inspect
-    @items = Item.all
+    @items = Item.paginate(page: params[:page])
   end
 
   # GET /items/1

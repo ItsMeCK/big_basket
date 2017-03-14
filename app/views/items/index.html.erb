@@ -47,7 +47,7 @@
     <%= image_tag("#{item.image}", size: "160x100", alt: "Edit Entry") %>
     
     <div class="producttitle"> <%= item.name%></div>
-    <div class="productprice"><div class="pull-right"><%= link_to "Show", item %></div><div class="pricetext"><% item.price%></div>
+    <div class="productprice"><div class="pull-right"><%= link_to "Show", item %></div><div class="pricetext"><%= item.price %></div>
     </div>
 </div>
   <% end %>

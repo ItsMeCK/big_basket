@@ -1,8 +1,6 @@
 <% if current_user.try(:role) == "Admin"  %>
-  <%= render(:partial => "admin_index") %>
-<% end %>
+  <%#= render(:partial => "admin_index") %>
 
 <%  else %>
-  <%= render(:partial => "user_index") %>
-<% end%>  
-
+  <%#= render(:partial => "user_index") %>
+<% end%> 

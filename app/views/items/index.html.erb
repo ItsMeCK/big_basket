@@ -1,4 +1,4 @@
-<% if current_user.try(:role) == "Admin"%>
+<% if current_user.try(:role) == "Admin"  %>
   <%= render(:partial => "admin_index") %>
 <% end %>
 

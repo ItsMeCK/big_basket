@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
-	validates :name, :price, :image, :provider , presence: true
 	validates :price, numericality: {greater_than_or_equal_to: 0}
 
-	mount_uploader :image, ImageUploader
+	mount_uploader :images, ImageUploader
+    mount_uploaders :avatars, ImageUploader
+  	serialize :avatars, JSON # If you use SQLite, add this line.
 end

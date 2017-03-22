@@ -71,6 +71,6 @@ load_and_authorize_resource :except => :create
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :price, :image, :availability, :provider)
+      params.require(:item).permit(:name, :price,   {avatars: []} , :availability, :provider)
     end
 end

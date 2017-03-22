@@ -2,7 +2,7 @@
 
   <% @items.each do |item| %>
     <div class="col-md-2 column productbox">
-        <%= image_tag("#{item.image}", size: "160x100", alt: "Edit Entry") %>
+        <%= image_tag("#{item.avatars.first}", size: "160x100", alt: "Edit Entry") %>
         
         <div class="producttitle"> <%= item.name%></div>
         <div class="productprice"><div class="pull-right"><%= button_to "Show", item, method: 'get' %></div><div class="pricetext"><%= item.price %></div>
